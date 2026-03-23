@@ -1,0 +1,29 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+build/
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+
+# Large AI models/weights (Deepface downloads)
+*.h5
+*.pt
+*.bin
+*.weights
+
+# OS generated files
+.DS_Store
+Thumbs.db
