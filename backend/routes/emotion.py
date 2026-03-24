@@ -1,29 +1,19 @@
-from fastapi import FastAPI, UploadFile, File, WebSocket, WebSocketDisconnect
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import APIRouter, UploadFile, File, WebSocket, WebSocketDisconnect
 import cv2
 import numpy as np
 import time
+import base64
+import asyncio
 
-from core_ai.emotion_detector import EmotionDetector
-from core_ai.state_tracker import EmotionStateTracker
+from backend.services.face_emotion import EmotionDetector
+from backend.services.smoothing import EmotionStateTracker
+from backend.utils.logger import EmotionLogger
 
-app = FastAPI(title="Multimodal Emotion Intelligence Platform (MEIP) API")
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+router = APIRouter(tags=["Emotion Analysis"])
 
 detector = EmotionDetector()
 
-@app.get("/")
-def read_root():
-    return {"status": "MEIP API is running cleanly"}
-
-@app.post("/detect-image")
+@router.post("/detect/image")
 async def detect_image(file: UploadFile = File(...)):
     contents = await file.read()
     nparr = np.frombuffer(contents, np.uint8)
@@ -45,16 +35,14 @@ async def detect_image(file: UploadFile = File(...)):
         
     return {"error": "No face detected"}
 
-import asyncio
-
-@app.websocket("/stream")
+@router.websocket("/stream")
 async def detect_video_stream(websocket: WebSocket):
     await websocket.accept()
     tracker = EmotionStateTracker()
+    session_logger = EmotionLogger()
     
     try:
         while True:
-            import base64
             data_text = await websocket.receive_text()
             
             if "," in data_text:
@@ -71,7 +59,7 @@ async def detect_video_stream(websocket: WebSocket):
                 continue
             
             if img is not None:
-                # Run the AI detection directly. (Running in to_thread causes TF graph exceptions)
+                # Execute inference directly within the active thread to avoid TensorFlow graph memory leak isolation bugs
                 results = detector.detect_emotion(img)
                 
                 if results and 'dominant_emotion' in results[0]:
@@ -80,6 +68,7 @@ async def detect_video_stream(websocket: WebSocket):
                     conf = float(face.get('emotion_confidence', 1.0))
                     
                     smoothed, insight = tracker.process_prediction(dom, conf)
+                    session_logger.log_event(smoothed, conf, source="face")
                     
                     await websocket.send_json({
                         "emotion": smoothed,
@@ -98,7 +87,3 @@ async def detect_video_stream(websocket: WebSocket):
                     })
     except WebSocketDisconnect:
         print("Client disconnected from stream")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("api.main:app", host="127.0.0.1", port=8080, reload=True)
