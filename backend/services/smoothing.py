@@ -2,7 +2,7 @@ from collections import deque
 import time
 
 class EmotionStateTracker:
-    def __init__(self, history_size=7, confidence_threshold=0.4, state_duration_sec=3.0):
+    def __init__(self, history_size=5, confidence_threshold=0.4, state_duration_sec=1.5):
         # Deque naturally drops oldest predictions when maxlen is reached
         self.history = deque(maxlen=history_size)
         self.confidence_threshold = confidence_threshold

@@ -5,13 +5,13 @@ class EmotionDetector:
     def __init__(self):
         pass
         
-    def detect_emotion(self, img_path_or_array):
+    def detect_emotion(self, img_path_or_array, backend='mtcnn'):
         """
         Detects emotion from an image or frame.
         Returns a list of dictionaries with bounding box, emotion logic, etc.
         """
         try:
-            results = DeepFace.analyze(img_path_or_array, actions=['emotion'], enforce_detection=False, detector_backend='mtcnn')
+            results = DeepFace.analyze(img_path_or_array, actions=['emotion'], enforce_detection=False, detector_backend=backend)
             if not isinstance(results, list):
                 results = [results]
             

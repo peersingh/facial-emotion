@@ -22,7 +22,7 @@ async def detect_image(file: UploadFile = File(...)):
     if img is None:
         return {"error": "Invalid image file"}
         
-    results = detector.detect_emotion(img)
+    results = detector.detect_emotion(img, backend='mtcnn')
     
     if results and 'dominant_emotion' in results[0]:
         face = results[0]
@@ -69,7 +69,8 @@ async def detect_video_stream(websocket: WebSocket):
                     img = cv2.resize(img, (int(w*scale), int(h*scale)))
                     
                 # Execute inference directly within isolated async thread to avoid Uvicorn Event-Loop starvation timeouts
-                results = await asyncio.to_thread(detector.detect_emotion, img)
+                # Use faster opencv backend for live stream to maintain high FPS and perceived accuracy
+                results = await asyncio.to_thread(detector.detect_emotion, img, backend='opencv')
                 
                 if results and 'dominant_emotion' in results[0]:
                     face = results[0]
