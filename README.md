@@ -1,6 +1,6 @@
-# 🧠 Multimodal Emotion Intelligence Platform (MEIP) v2.8
+# 🧠 Multimodal Emotion Intelligence Platform (MEIP) v2.9
 
-> A production-grade, stateful multimodal emotion tracking platform combining High-Precision Facial ROI and FFMPEG-Free Acoustic Intelligence.
+> A production-grade, stateful multimodal emotion tracking platform combining Adaptive High-Precision Facial ROI and FFMPEG-Free Acoustic Intelligence.
 
 ![MEIP Interface](frontend/public/vite.svg)
 
@@ -57,7 +57,8 @@ npm run dev
 
 ---
 
-## 🔝 Version 2.8 Highlights
+## 🔝 Version History Highlights
+* **v2.9**: Implemented Adaptive Detector Optimization (Hybrid OpenCV/MTCNN engine for speed & precision).
 * **v2.8**: Switched to MTCNN for near-perfect facial ROI alignment.
 * **v2.7**: Native Browser PCM WAV encoding (Removes FFMPEG requirement).
 * **v2.6**: Acoustic peak-normalization and heuristic recalibration.

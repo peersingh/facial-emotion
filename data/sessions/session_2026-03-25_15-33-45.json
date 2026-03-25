@@ -1,0 +1,1802 @@
+[
+    {
+        "timestamp": "2026-03-25T15:33:47.251227",
+        "emotion": "neutral",
+        "confidence": 0.9954,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:47.434585",
+        "emotion": "neutral",
+        "confidence": 0.9955,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:47.624851",
+        "emotion": "neutral",
+        "confidence": 0.9923,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:47.821257",
+        "emotion": "neutral",
+        "confidence": 0.9729,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:48.019507",
+        "emotion": "neutral",
+        "confidence": 0.964,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:48.222732",
+        "emotion": "neutral",
+        "confidence": 0.951,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:48.440301",
+        "emotion": "neutral",
+        "confidence": 0.9691,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:48.622864",
+        "emotion": "neutral",
+        "confidence": 0.9804,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:48.817518",
+        "emotion": "neutral",
+        "confidence": 0.9872,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:49.017729",
+        "emotion": "neutral",
+        "confidence": 0.9004,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:49.219591",
+        "emotion": "neutral",
+        "confidence": 0.901,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:49.420747",
+        "emotion": "happy",
+        "confidence": 0.9899,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:49.646788",
+        "emotion": "happy",
+        "confidence": 0.9584,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:49.839068",
+        "emotion": "happy",
+        "confidence": 0.8913,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:50.013632",
+        "emotion": "happy",
+        "confidence": 0.79,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:50.219127",
+        "emotion": "happy",
+        "confidence": 0.768,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:50.422303",
+        "emotion": "happy",
+        "confidence": 0.8914,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:50.622540",
+        "emotion": "happy",
+        "confidence": 0.624,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:50.827869",
+        "emotion": "happy",
+        "confidence": 0.8755,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:51.030604",
+        "emotion": "happy",
+        "confidence": 0.6833,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:51.245981",
+        "emotion": "happy",
+        "confidence": 0.9221,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:51.465983",
+        "emotion": "happy",
+        "confidence": 0.6696,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:51.631627",
+        "emotion": "neutral",
+        "confidence": 0.6964,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:51.823406",
+        "emotion": "neutral",
+        "confidence": 0.6303,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:52.020372",
+        "emotion": "neutral",
+        "confidence": 0.7461,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:52.224821",
+        "emotion": "neutral",
+        "confidence": 0.757,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:52.435501",
+        "emotion": "neutral",
+        "confidence": 0.7587,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:52.665554",
+        "emotion": "neutral",
+        "confidence": 0.7484,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:52.839615",
+        "emotion": "neutral",
+        "confidence": 0.7877,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:53.023145",
+        "emotion": "neutral",
+        "confidence": 0.8115,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:53.226451",
+        "emotion": "neutral",
+        "confidence": 0.625,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:53.422961",
+        "emotion": "neutral",
+        "confidence": 0.8225,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:53.640715",
+        "emotion": "neutral",
+        "confidence": 0.9171,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:53.818930",
+        "emotion": "neutral",
+        "confidence": 0.974,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:54.015450",
+        "emotion": "neutral",
+        "confidence": 0.9139,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:54.216090",
+        "emotion": "neutral",
+        "confidence": 0.9355,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:54.430500",
+        "emotion": "neutral",
+        "confidence": 0.8357,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:54.613303",
+        "emotion": "neutral",
+        "confidence": 0.8492,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:54.834906",
+        "emotion": "neutral",
+        "confidence": 0.5118,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:55.016178",
+        "emotion": "neutral",
+        "confidence": 0.6485,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:55.217882",
+        "emotion": "neutral",
+        "confidence": 0.9268,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:55.421381",
+        "emotion": "neutral",
+        "confidence": 0.5919,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:55.633022",
+        "emotion": "neutral",
+        "confidence": 0.9732,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:55.815702",
+        "emotion": "neutral",
+        "confidence": 0.9321,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:56.029680",
+        "emotion": "neutral",
+        "confidence": 0.9549,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:56.215612",
+        "emotion": "neutral",
+        "confidence": 0.8326,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:56.417734",
+        "emotion": "neutral",
+        "confidence": 0.9015,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:56.617132",
+        "emotion": "neutral",
+        "confidence": 0.979,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:56.848760",
+        "emotion": "neutral",
+        "confidence": 0.9984,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:57.039869",
+        "emotion": "neutral",
+        "confidence": 0.6047,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:57.220536",
+        "emotion": "neutral",
+        "confidence": 0.5053,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:57.435218",
+        "emotion": "neutral",
+        "confidence": 0.5861,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:57.634152",
+        "emotion": "neutral",
+        "confidence": 0.7977,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:57.828539",
+        "emotion": "fear",
+        "confidence": 0.7894,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:58.040555",
+        "emotion": "fear",
+        "confidence": 0.9659,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:58.233774",
+        "emotion": "fear",
+        "confidence": 0.8507,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:58.446635",
+        "emotion": "fear",
+        "confidence": 0.8475,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:58.629130",
+        "emotion": "fear",
+        "confidence": 0.8389,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:58.831118",
+        "emotion": "fear",
+        "confidence": 0.8557,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:59.033003",
+        "emotion": "fear",
+        "confidence": 0.8252,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:59.234029",
+        "emotion": "fear",
+        "confidence": 0.8294,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:59.434516",
+        "emotion": "fear",
+        "confidence": 0.8637,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:59.639668",
+        "emotion": "fear",
+        "confidence": 0.8858,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:33:59.827453",
+        "emotion": "fear",
+        "confidence": 0.8503,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:00.025890",
+        "emotion": "fear",
+        "confidence": 0.8527,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:00.237178",
+        "emotion": "fear",
+        "confidence": 0.8359,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:00.448284",
+        "emotion": "fear",
+        "confidence": 0.8718,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:00.630743",
+        "emotion": "fear",
+        "confidence": 0.8483,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:00.839480",
+        "emotion": "fear",
+        "confidence": 0.8448,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:01.026979",
+        "emotion": "fear",
+        "confidence": 0.8394,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:01.220841",
+        "emotion": "fear",
+        "confidence": 0.87,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:01.430252",
+        "emotion": "fear",
+        "confidence": 0.874,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:01.643179",
+        "emotion": "fear",
+        "confidence": 0.9029,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:01.849666",
+        "emotion": "fear",
+        "confidence": 0.8965,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:02.031906",
+        "emotion": "fear",
+        "confidence": 0.8879,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:02.232639",
+        "emotion": "fear",
+        "confidence": 0.8866,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:02.423704",
+        "emotion": "fear",
+        "confidence": 0.8254,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:02.620048",
+        "emotion": "fear",
+        "confidence": 0.8568,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:02.851403",
+        "emotion": "fear",
+        "confidence": 0.8653,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:03.039071",
+        "emotion": "fear",
+        "confidence": 0.8641,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:03.244278",
+        "emotion": "fear",
+        "confidence": 0.8584,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:03.420258",
+        "emotion": "fear",
+        "confidence": 0.8505,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:03.631570",
+        "emotion": "fear",
+        "confidence": 0.8869,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:03.823185",
+        "emotion": "fear",
+        "confidence": 0.8963,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:04.063124",
+        "emotion": "fear",
+        "confidence": 0.8888,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:04.230854",
+        "emotion": "fear",
+        "confidence": 0.8932,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:04.445496",
+        "emotion": "fear",
+        "confidence": 0.9442,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:04.634383",
+        "emotion": "fear",
+        "confidence": 0.9832,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:04.842153",
+        "emotion": "fear",
+        "confidence": 0.9883,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:05.059744",
+        "emotion": "fear",
+        "confidence": 0.9851,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:05.228207",
+        "emotion": "fear",
+        "confidence": 0.9854,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:05.433024",
+        "emotion": "fear",
+        "confidence": 0.9897,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:05.643867",
+        "emotion": "fear",
+        "confidence": 0.9888,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:05.835424",
+        "emotion": "fear",
+        "confidence": 0.9857,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:06.047841",
+        "emotion": "fear",
+        "confidence": 0.9822,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:06.235342",
+        "emotion": "fear",
+        "confidence": 0.9876,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:06.425458",
+        "emotion": "fear",
+        "confidence": 0.9805,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:06.627689",
+        "emotion": "fear",
+        "confidence": 0.986,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:06.833832",
+        "emotion": "fear",
+        "confidence": 0.9817,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:07.055491",
+        "emotion": "fear",
+        "confidence": 0.9699,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:07.219136",
+        "emotion": "fear",
+        "confidence": 0.9773,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:07.418363",
+        "emotion": "fear",
+        "confidence": 0.9544,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:07.623351",
+        "emotion": "fear",
+        "confidence": 0.926,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:07.836897",
+        "emotion": "fear",
+        "confidence": 0.9248,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:08.050374",
+        "emotion": "fear",
+        "confidence": 0.9709,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:08.247507",
+        "emotion": "fear",
+        "confidence": 0.8906,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:08.427233",
+        "emotion": "fear",
+        "confidence": 0.9124,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:08.624523",
+        "emotion": "fear",
+        "confidence": 0.9045,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:08.852477",
+        "emotion": "fear",
+        "confidence": 0.8724,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:09.035150",
+        "emotion": "fear",
+        "confidence": 0.8786,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:09.246954",
+        "emotion": "fear",
+        "confidence": 0.8942,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:09.423009",
+        "emotion": "fear",
+        "confidence": 0.9184,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:09.627719",
+        "emotion": "fear",
+        "confidence": 0.9231,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:09.824365",
+        "emotion": "fear",
+        "confidence": 0.9359,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:10.042713",
+        "emotion": "fear",
+        "confidence": 0.8989,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:10.241037",
+        "emotion": "fear",
+        "confidence": 0.8503,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:10.450523",
+        "emotion": "fear",
+        "confidence": 0.7596,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:10.627015",
+        "emotion": "fear",
+        "confidence": 0.7745,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:10.839743",
+        "emotion": "fear",
+        "confidence": 0.7893,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:11.025317",
+        "emotion": "fear",
+        "confidence": 0.8819,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:11.298459",
+        "emotion": "fear",
+        "confidence": 0.9321,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:11.434712",
+        "emotion": "fear",
+        "confidence": 0.9152,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:11.624523",
+        "emotion": "fear",
+        "confidence": 0.9324,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:11.847348",
+        "emotion": "fear",
+        "confidence": 0.919,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:12.039857",
+        "emotion": "fear",
+        "confidence": 0.898,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:12.261861",
+        "emotion": "fear",
+        "confidence": 0.8684,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:12.441529",
+        "emotion": "fear",
+        "confidence": 0.8239,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:12.646726",
+        "emotion": "fear",
+        "confidence": 0.7062,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:12.820135",
+        "emotion": "fear",
+        "confidence": 0.6094,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:13.031257",
+        "emotion": "fear",
+        "confidence": 0.6182,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:13.250198",
+        "emotion": "fear",
+        "confidence": 0.6916,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:13.441913",
+        "emotion": "neutral",
+        "confidence": 0.747,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:13.648154",
+        "emotion": "neutral",
+        "confidence": 0.7178,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:13.820141",
+        "emotion": "neutral",
+        "confidence": 0.6298,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:14.031634",
+        "emotion": "neutral",
+        "confidence": 0.6037,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:14.229728",
+        "emotion": "neutral",
+        "confidence": 0.6706,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:14.449631",
+        "emotion": "fear",
+        "confidence": 0.7255,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:14.652550",
+        "emotion": "fear",
+        "confidence": 0.6895,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:14.834122",
+        "emotion": "fear",
+        "confidence": 0.7302,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:15.044525",
+        "emotion": "fear",
+        "confidence": 0.6922,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:15.235197",
+        "emotion": "fear",
+        "confidence": 0.6244,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:15.427116",
+        "emotion": "fear",
+        "confidence": 0.5199,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:15.647513",
+        "emotion": "fear",
+        "confidence": 0.5331,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:15.841129",
+        "emotion": "neutral",
+        "confidence": 0.509,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:16.042516",
+        "emotion": "neutral",
+        "confidence": 0.5127,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:16.218550",
+        "emotion": "neutral",
+        "confidence": 0.5304,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:16.427962",
+        "emotion": "neutral",
+        "confidence": 0.4862,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:16.629431",
+        "emotion": "neutral",
+        "confidence": 0.5365,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:16.864307",
+        "emotion": "neutral",
+        "confidence": 0.5856,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:17.032848",
+        "emotion": "fear",
+        "confidence": 0.5641,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:17.232551",
+        "emotion": "fear",
+        "confidence": 0.6072,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:17.429132",
+        "emotion": "fear",
+        "confidence": 0.5755,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:17.621184",
+        "emotion": "fear",
+        "confidence": 0.6055,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:17.825803",
+        "emotion": "fear",
+        "confidence": 0.5986,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:18.054478",
+        "emotion": "fear",
+        "confidence": 0.5498,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:18.233816",
+        "emotion": "fear",
+        "confidence": 0.6016,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:18.442706",
+        "emotion": "fear",
+        "confidence": 0.6391,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:18.650967",
+        "emotion": "fear",
+        "confidence": 0.7706,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:18.830722",
+        "emotion": "fear",
+        "confidence": 0.8884,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:19.033487",
+        "emotion": "fear",
+        "confidence": 0.7977,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:19.241194",
+        "emotion": "fear",
+        "confidence": 0.5917,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:19.445746",
+        "emotion": "fear",
+        "confidence": 0.7781,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:19.646341",
+        "emotion": "neutral",
+        "confidence": 0.8054,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:19.843070",
+        "emotion": "neutral",
+        "confidence": 0.77,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:20.025601",
+        "emotion": "neutral",
+        "confidence": 0.7327,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:20.254311",
+        "emotion": "neutral",
+        "confidence": 0.8226,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:20.434497",
+        "emotion": "neutral",
+        "confidence": 0.8134,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:20.620765",
+        "emotion": "neutral",
+        "confidence": 0.6136,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:20.843697",
+        "emotion": "neutral",
+        "confidence": 0.6504,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:21.049214",
+        "emotion": "neutral",
+        "confidence": 0.4913,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:21.247002",
+        "emotion": "fear",
+        "confidence": 0.6831,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:21.447357",
+        "emotion": "fear",
+        "confidence": 0.9176,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:21.625332",
+        "emotion": "fear",
+        "confidence": 0.9222,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:21.825899",
+        "emotion": "fear",
+        "confidence": 0.9519,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:22.040343",
+        "emotion": "fear",
+        "confidence": 0.8791,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:22.231274",
+        "emotion": "fear",
+        "confidence": 0.4551,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:22.458614",
+        "emotion": "fear",
+        "confidence": 0.5229,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:22.639051",
+        "emotion": "fear",
+        "confidence": 0.7397,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:22.819050",
+        "emotion": "fear",
+        "confidence": 0.995,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:23.027581",
+        "emotion": "sad",
+        "confidence": 0.9989,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:23.220900",
+        "emotion": "sad",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:23.473425",
+        "emotion": "sad",
+        "confidence": 0.9991,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:23.644649",
+        "emotion": "sad",
+        "confidence": 0.9994,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:23.826320",
+        "emotion": "sad",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:24.034812",
+        "emotion": "sad",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:24.222383",
+        "emotion": "sad",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:24.423877",
+        "emotion": "sad",
+        "confidence": 0.9997,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:24.655494",
+        "emotion": "sad",
+        "confidence": 0.9996,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:24.849283",
+        "emotion": "sad",
+        "confidence": 0.9993,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:25.041699",
+        "emotion": "sad",
+        "confidence": 0.9994,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:25.236825",
+        "emotion": "sad",
+        "confidence": 0.9995,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:25.438127",
+        "emotion": "sad",
+        "confidence": 0.9991,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:25.622259",
+        "emotion": "sad",
+        "confidence": 0.9987,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:25.844048",
+        "emotion": "sad",
+        "confidence": 0.998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:26.046290",
+        "emotion": "sad",
+        "confidence": 0.997,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:26.243615",
+        "emotion": "sad",
+        "confidence": 0.9944,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:26.439717",
+        "emotion": "sad",
+        "confidence": 0.996,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:26.634975",
+        "emotion": "sad",
+        "confidence": 0.9959,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:26.829125",
+        "emotion": "sad",
+        "confidence": 0.9959,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:27.077191",
+        "emotion": "sad",
+        "confidence": 0.9959,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:27.237806",
+        "emotion": "sad",
+        "confidence": 0.9971,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:27.439804",
+        "emotion": "sad",
+        "confidence": 0.9968,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:27.630961",
+        "emotion": "sad",
+        "confidence": 0.9961,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:27.816567",
+        "emotion": "sad",
+        "confidence": 0.9971,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:28.047335",
+        "emotion": "sad",
+        "confidence": 0.9987,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:28.247886",
+        "emotion": "sad",
+        "confidence": 0.9979,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:28.443328",
+        "emotion": "sad",
+        "confidence": 0.9881,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:28.638360",
+        "emotion": "sad",
+        "confidence": 0.8452,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:28.835138",
+        "emotion": "sad",
+        "confidence": 0.8382,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:29.034529",
+        "emotion": "sad",
+        "confidence": 0.9211,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:29.274742",
+        "emotion": "neutral",
+        "confidence": 0.5574,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:29.435655",
+        "emotion": "neutral",
+        "confidence": 0.54,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:29.625834",
+        "emotion": "neutral",
+        "confidence": 0.6725,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:29.829404",
+        "emotion": "neutral",
+        "confidence": 0.5073,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:30.026032",
+        "emotion": "neutral",
+        "confidence": 0.4851,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:30.230852",
+        "emotion": "neutral",
+        "confidence": 0.7468,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:30.447024",
+        "emotion": "neutral",
+        "confidence": 0.6997,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:30.642598",
+        "emotion": "happy",
+        "confidence": 0.9221,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:30.828628",
+        "emotion": "fear",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:31.025198",
+        "emotion": "fear",
+        "confidence": 0.9998,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:31.249093",
+        "emotion": "fear",
+        "confidence": 0.9946,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:31.457780",
+        "emotion": "fear",
+        "confidence": 0.9889,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:31.644185",
+        "emotion": "fear",
+        "confidence": 0.989,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:31.844078",
+        "emotion": "fear",
+        "confidence": 0.9846,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:32.030306",
+        "emotion": "fear",
+        "confidence": 0.9902,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:32.230226",
+        "emotion": "fear",
+        "confidence": 0.9802,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:32.432768",
+        "emotion": "fear",
+        "confidence": 0.9852,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:32.624833",
+        "emotion": "fear",
+        "confidence": 0.9942,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:32.823237",
+        "emotion": "fear",
+        "confidence": 0.9898,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:33.046593",
+        "emotion": "fear",
+        "confidence": 0.9964,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:33.260530",
+        "emotion": "fear",
+        "confidence": 0.9947,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:33.444338",
+        "emotion": "fear",
+        "confidence": 0.9951,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:33.640026",
+        "emotion": "fear",
+        "confidence": 0.9947,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:33.842985",
+        "emotion": "fear",
+        "confidence": 0.9941,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:34.048814",
+        "emotion": "fear",
+        "confidence": 0.9922,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:34.249775",
+        "emotion": "fear",
+        "confidence": 0.9917,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:34.432958",
+        "emotion": "fear",
+        "confidence": 0.9927,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:34.636560",
+        "emotion": "fear",
+        "confidence": 0.9924,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:34.842284",
+        "emotion": "fear",
+        "confidence": 0.9961,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:35.031652",
+        "emotion": "fear",
+        "confidence": 0.6849,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:35.237527",
+        "emotion": "fear",
+        "confidence": 0.4988,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:35.459761",
+        "emotion": "fear",
+        "confidence": 0.9954,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:35.620986",
+        "emotion": "neutral",
+        "confidence": 0.864,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:35.829019",
+        "emotion": "neutral",
+        "confidence": 0.6447,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:36.033274",
+        "emotion": "sad",
+        "confidence": 0.6033,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:36.244840",
+        "emotion": "sad",
+        "confidence": 0.7066,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:36.446354",
+        "emotion": "sad",
+        "confidence": 0.7904,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:36.626509",
+        "emotion": "sad",
+        "confidence": 0.7356,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:36.833410",
+        "emotion": "sad",
+        "confidence": 0.8199,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:37.031141",
+        "emotion": "sad",
+        "confidence": 0.806,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:37.213188",
+        "emotion": "sad",
+        "confidence": 0.7902,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:37.408585",
+        "emotion": "sad",
+        "confidence": 0.8206,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:37.618817",
+        "emotion": "sad",
+        "confidence": 0.7101,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:37.820252",
+        "emotion": "sad",
+        "confidence": 0.8261,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:38.032527",
+        "emotion": "sad",
+        "confidence": 0.7612,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:38.232022",
+        "emotion": "sad",
+        "confidence": 0.7223,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:38.439781",
+        "emotion": "sad",
+        "confidence": 0.922,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:38.627861",
+        "emotion": "sad",
+        "confidence": 0.4145,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:38.813902",
+        "emotion": "sad",
+        "confidence": 0.6644,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:39.031780",
+        "emotion": "sad",
+        "confidence": 0.8702,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:39.226916",
+        "emotion": "sad",
+        "confidence": 0.8645,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:39.428627",
+        "emotion": "sad",
+        "confidence": 0.812,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:39.631808",
+        "emotion": "sad",
+        "confidence": 0.762,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:39.828128",
+        "emotion": "sad",
+        "confidence": 0.8195,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:40.048937",
+        "emotion": "sad",
+        "confidence": 0.5809,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:40.228197",
+        "emotion": "sad",
+        "confidence": 0.7994,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:40.430337",
+        "emotion": "neutral",
+        "confidence": 0.9382,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:40.629104",
+        "emotion": "neutral",
+        "confidence": 0.9733,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:40.832564",
+        "emotion": "neutral",
+        "confidence": 0.9898,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:41.013402",
+        "emotion": "neutral",
+        "confidence": 0.8668,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:41.240373",
+        "emotion": "neutral",
+        "confidence": 0.9917,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:41.439118",
+        "emotion": "neutral",
+        "confidence": 0.9073,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:41.632805",
+        "emotion": "neutral",
+        "confidence": 0.9313,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:41.822845",
+        "emotion": "neutral",
+        "confidence": 0.9119,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:42.031946",
+        "emotion": "neutral",
+        "confidence": 0.961,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:42.237932",
+        "emotion": "neutral",
+        "confidence": 0.9637,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:42.424243",
+        "emotion": "neutral",
+        "confidence": 0.9885,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:42.619941",
+        "emotion": "neutral",
+        "confidence": 0.946,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:42.833679",
+        "emotion": "neutral",
+        "confidence": 0.9685,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:43.017340",
+        "emotion": "neutral",
+        "confidence": 0.9764,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:43.213374",
+        "emotion": "neutral",
+        "confidence": 0.8758,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:43.453292",
+        "emotion": "neutral",
+        "confidence": 0.9173,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:43.622246",
+        "emotion": "neutral",
+        "confidence": 0.9546,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:43.838112",
+        "emotion": "neutral",
+        "confidence": 0.9544,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:44.038262",
+        "emotion": "neutral",
+        "confidence": 0.9755,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:44.238301",
+        "emotion": "neutral",
+        "confidence": 0.9744,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:44.456557",
+        "emotion": "neutral",
+        "confidence": 0.9706,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:44.624817",
+        "emotion": "neutral",
+        "confidence": 0.9854,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:44.817765",
+        "emotion": "neutral",
+        "confidence": 0.9599,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:45.030861",
+        "emotion": "neutral",
+        "confidence": 0.9767,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:45.228295",
+        "emotion": "neutral",
+        "confidence": 0.3739,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:45.429219",
+        "emotion": "neutral",
+        "confidence": 0.4407,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:45.658183",
+        "emotion": "neutral",
+        "confidence": 0.9802,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:45.834918",
+        "emotion": "neutral",
+        "confidence": 0.762,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:46.022966",
+        "emotion": "neutral",
+        "confidence": 0.9665,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:46.239146",
+        "emotion": "neutral",
+        "confidence": 0.9288,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:46.438136",
+        "emotion": "neutral",
+        "confidence": 0.9347,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:46.633757",
+        "emotion": "neutral",
+        "confidence": 0.9506,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:46.856479",
+        "emotion": "neutral",
+        "confidence": 0.7657,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:34:47.023256",
+        "emotion": "neutral",
+        "confidence": 0.9879,
+        "source": "face"
+    }
+]

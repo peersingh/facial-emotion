@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp": "2026-03-25T15:38:54.545854",
+        "emotion": "fear",
+        "confidence": 0.9729,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:54.728422",
+        "emotion": "fear",
+        "confidence": 0.9527,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:54.926831",
+        "emotion": "fear",
+        "confidence": 0.9282,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:55.120324",
+        "emotion": "fear",
+        "confidence": 0.7723,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:55.350308",
+        "emotion": "fear",
+        "confidence": 0.9057,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:55.542796",
+        "emotion": "fear",
+        "confidence": 0.8544,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:55.747922",
+        "emotion": "fear",
+        "confidence": 0.8699,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:55.910167",
+        "emotion": "fear",
+        "confidence": 0.889,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:56.116087",
+        "emotion": "fear",
+        "confidence": 0.8939,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:38:56.327354",
+        "emotion": "fear",
+        "confidence": 0.8756,
+        "source": "face"
+    }
+]
