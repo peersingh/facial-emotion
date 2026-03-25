@@ -8,7 +8,11 @@ class VoiceEmotionAnalyzer:
 
     def extract_features(self, file_path):
         # Extract MFCC, Spectral Centroid, and RMS Energy uniformly
+        # AI Tuning: Force normalization to prevent "Whisper Neutrality" on quiet mics
         y, sr = librosa.load(file_path, sr=22050)
+        if len(y) > 0:
+            y = librosa.util.normalize(y)
+            
         mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
         rms = librosa.feature.rms(y=y)
         centroid = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -29,21 +33,24 @@ class VoiceEmotionAnalyzer:
             
             energy = features["energy_mean"]
             pitch = features["pitch_mean"]
+            print(f"[AI] Voice Features -> Energy: {energy:.4f}, Pitch: {pitch:.2f}")
             
-            if energy > 0.05 and pitch > 2000:
-                emotion, conf = "angry", 0.85
-            elif energy > 0.03 and pitch > 1500:
-                emotion, conf = "happy", 0.80
-            elif energy > 0.04 and pitch > 3000:
-                emotion, conf = "surprise", 0.75
-            elif energy < 0.015 and pitch < 1000:
-                emotion, conf = "sad", 0.82
-            elif energy < 0.02 and pitch > 1500:
-                emotion, conf = "fear", 0.65
-            elif pitch < 800 and energy > 0.02:
-                emotion, conf = "disgust", 0.60
+            # Refined Heuristic Matrix (MEIP v2.6 Optimized)
+            # Normalization above allows for tighter, more accurate boundary detection
+            if energy > 0.08 and pitch > 2200:
+                emotion, conf = "angry", 0.88
+            elif energy > 0.04 and pitch > 1600:
+                emotion, conf = "happy", 0.82
+            elif energy > 0.05 and pitch > 2800:
+                emotion, conf = "surprise", 0.78
+            elif energy < 0.02 and pitch < 1200:
+                emotion, conf = "sad", 0.84
+            elif energy < 0.03 and pitch > 2000:
+                emotion, conf = "fear", 0.68
+            elif pitch < 900 and energy > 0.04:
+                emotion, conf = "disgust", 0.62
             else:
-                emotion, conf = "neutral", 0.70
+                emotion, conf = "neutral", 0.75
                 
             return {
                 "emotion": emotion,

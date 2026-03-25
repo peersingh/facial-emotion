@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp": "2026-03-25T07:48:43.546928",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:44.515966",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:45.527173",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:46.516272",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:47.537989",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:48.536329",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:49.537950",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:50.532489",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:51.549723",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T07:48:52.542612",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    }
+]

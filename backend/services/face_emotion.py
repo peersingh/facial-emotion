@@ -11,7 +11,7 @@ class EmotionDetector:
         Returns a list of dictionaries with bounding box, emotion logic, etc.
         """
         try:
-            results = DeepFace.analyze(img_path_or_array, actions=['emotion'], enforce_detection=False)
+            results = DeepFace.analyze(img_path_or_array, actions=['emotion'], enforce_detection=False, detector_backend='mtcnn')
             if not isinstance(results, list):
                 results = [results]
             

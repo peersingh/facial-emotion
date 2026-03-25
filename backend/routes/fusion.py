@@ -1,15 +1,17 @@
-from fastapi import APIRouter, UploadFile, File
-import cv2
-import numpy as np
-import tempfile
 import os
+import cv2
+import tempfile
+import numpy as np
+import asyncio
+from fastapi import APIRouter, UploadFile, File
 
-from backend.services.face_emotion import EmotionDetector
-from backend.services.voice_emotion import VoiceEmotionAnalyzer
-from backend.services.fusion import MultimodalFusionEngine
+from backend.services.face_emotion import EmotionDetector #
+from backend.services.voice_emotion import VoiceEmotionAnalyzer #
+from backend.services.fusion import MultimodalFusionEngine #
 
 router = APIRouter(tags=["Multimodal Fusion"])
 
+# Initialize core intelligence services
 face_detector = EmotionDetector()
 voice_analyzer = VoiceEmotionAnalyzer()
 fusion_engine = MultimodalFusionEngine()
@@ -19,6 +21,9 @@ async def detect_fusion(
     image: UploadFile = File(None),
     audio: UploadFile = File(None)
 ):
+    """
+    Standard Static Fusion: Processes one image and one audio file.
+    """
     face_result = None
     voice_result = None
     
@@ -46,6 +51,12 @@ async def detect_fusion(
         
     fused = fusion_engine.fuse(face_result, voice_result)
     
+    return {
+        "fused_result": fused,
+        "raw_face": face_result,
+        "raw_voice": voice_result
+    }
+
     return {
         "fused_result": fused,
         "raw_face": face_result,

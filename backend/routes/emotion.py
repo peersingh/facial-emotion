@@ -26,11 +26,14 @@ async def detect_image(file: UploadFile = File(...)):
     
     if results and 'dominant_emotion' in results[0]:
         face = results[0]
+        h, w = img.shape[:2]
         return {
             "emotion": face['dominant_emotion'],
             "confidence": float(face.get('emotion_confidence', 1.0)),
             "timestamp": time.time(),
-            "region": face.get('region')
+            "region": face.get('region'),
+            "img_w": w,
+            "img_h": h
         }
         
     return {"error": "No face detected"}
@@ -59,8 +62,14 @@ async def detect_video_stream(websocket: WebSocket):
                 continue
             
             if img is not None:
-                # Execute inference directly within the active thread to avoid TensorFlow graph memory leak isolation bugs
-                results = detector.detect_emotion(img)
+                # OOM Preemption: Clamp massive network camera dimensions to 640px bounding boxes
+                h, w = img.shape[:2]
+                if w > 640 or h > 640:
+                    scale = min(640/w, 640/h)
+                    img = cv2.resize(img, (int(w*scale), int(h*scale)))
+                    
+                # Execute inference directly within isolated async thread to avoid Uvicorn Event-Loop starvation timeouts
+                results = await asyncio.to_thread(detector.detect_emotion, img)
                 
                 if results and 'dominant_emotion' in results[0]:
                     face = results[0]
