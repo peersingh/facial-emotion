@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp": "2026-03-25T08:08:27.127077",
+        "emotion": "neutral",
+        "confidence": 0.9828,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:27.828185",
+        "emotion": "neutral",
+        "confidence": 0.9673,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:28.535589",
+        "emotion": "neutral",
+        "confidence": 0.9875,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:29.305289",
+        "emotion": "neutral",
+        "confidence": 0.9838,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:30.018032",
+        "emotion": "neutral",
+        "confidence": 0.9908,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:30.686345",
+        "emotion": "neutral",
+        "confidence": 0.9621,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:31.419109",
+        "emotion": "neutral",
+        "confidence": 0.9692,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:32.105732",
+        "emotion": "neutral",
+        "confidence": 0.973,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:32.820493",
+        "emotion": "neutral",
+        "confidence": 0.6463,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T08:08:33.516653",
+        "emotion": "neutral",
+        "confidence": 0.87,
+        "source": "face"
+    }
+]
