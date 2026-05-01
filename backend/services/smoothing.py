@@ -20,7 +20,8 @@ class EmotionStateTracker:
             "fear": "Anxious",
             "surprise": "Shocked",
             "disgust": "Disgusted",
-            "neutral": "Calm"
+            "neutral": "Calm",
+            "subtle_stress": "Tense"
         }
         
     def process_prediction(self, emotion_label, confidence):

@@ -1,0 +1,182 @@
+[
+    {
+        "timestamp": "2026-03-25T15:43:37.883807",
+        "emotion": "angry",
+        "confidence": 0.8155,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:38.118417",
+        "emotion": "angry",
+        "confidence": 0.9271,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:38.300270",
+        "emotion": "neutral",
+        "confidence": 0.9688,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:38.489737",
+        "emotion": "neutral",
+        "confidence": 0.9216,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:38.699837",
+        "emotion": "neutral",
+        "confidence": 0.934,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:38.905058",
+        "emotion": "neutral",
+        "confidence": 0.9835,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:39.115867",
+        "emotion": "neutral",
+        "confidence": 0.9466,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:39.300696",
+        "emotion": "neutral",
+        "confidence": 0.9665,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:39.495373",
+        "emotion": "neutral",
+        "confidence": 0.9777,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:39.731586",
+        "emotion": "neutral",
+        "confidence": 0.9511,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:39.907906",
+        "emotion": "neutral",
+        "confidence": 0.9503,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:40.101172",
+        "emotion": "neutral",
+        "confidence": 0.9266,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:40.316101",
+        "emotion": "neutral",
+        "confidence": 0.7883,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:40.536723",
+        "emotion": "neutral",
+        "confidence": 0.9644,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:40.713063",
+        "emotion": "neutral",
+        "confidence": 0.8646,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:40.916647",
+        "emotion": "neutral",
+        "confidence": 0.891,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:41.105763",
+        "emotion": "neutral",
+        "confidence": 0.8726,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:41.314352",
+        "emotion": "neutral",
+        "confidence": 0.8897,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:41.512646",
+        "emotion": "neutral",
+        "confidence": 0.9039,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:41.708629",
+        "emotion": "neutral",
+        "confidence": 0.8892,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:41.915004",
+        "emotion": "neutral",
+        "confidence": 0.8654,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:42.106125",
+        "emotion": "neutral",
+        "confidence": 0.8397,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:42.290676",
+        "emotion": "neutral",
+        "confidence": 0.8863,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:42.494402",
+        "emotion": "neutral",
+        "confidence": 0.9152,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:42.693074",
+        "emotion": "neutral",
+        "confidence": 0.7236,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:42.922479",
+        "emotion": "neutral",
+        "confidence": 0.4771,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:43.100244",
+        "emotion": "neutral",
+        "confidence": 0.71,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:43.286523",
+        "emotion": "neutral",
+        "confidence": 0.9274,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:43.493948",
+        "emotion": "neutral",
+        "confidence": 0.9421,
+        "source": "face"
+    },
+    {
+        "timestamp": "2026-03-25T15:43:43.711154",
+        "emotion": "neutral",
+        "confidence": 0.9226,
+        "source": "face"
+    }
+]
