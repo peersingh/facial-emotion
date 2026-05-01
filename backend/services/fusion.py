@@ -32,31 +32,45 @@ class MultimodalFusionEngine:
             trigger_word_prediction = True
             print("[AI] ⚡ Elite Fusion Trigger: SPEECH FRICTION EVENT DETECTED ⚡")
         
-        # Base fusion logic
+        # Base fusion logic (MEIP v3.0: 70% Acoustic, 20% Kinetic, 10% Facial)
+        face_w = 0.10
+        voice_w = 0.70
+        pose_w = 0.20
+        
+        p_conf = pose_result.get("metrics", {}).get("pose_stress_level", 0.0) if pose_result else 0.0
+        
+        f_score = f_conf * face_w
+        v_score = v_conf * voice_w
+        p_score = p_conf * pose_w
+        
         final_result = {}
         if f_emo == v_emo:
             # Synergistic boost
             final_result = {
                 "emotion": f_emo,
-                "confidence": min(1.0, (f_conf * self.face_weight) + (v_conf * self.voice_weight) + 0.15),
+                "confidence": min(1.0, f_score + v_score + p_score + 0.25),
                 "fusion_mode": "synergistic"
             }
         else:
             # Conflict resolution based on statistically weighted confidence matrices
-            f_score = f_conf * self.face_weight
-            v_score = v_conf * self.voice_weight
-            
-            if f_score >= v_score:
+            if v_score >= f_score and v_score >= p_score:
                 final_result = {
-                    "emotion": f_emo,
-                    "confidence": f_score,
-                    "fusion_mode": "face_dominant"
+                    "emotion": v_emo,
+                    "confidence": min(1.0, v_score + p_score),
+                    "fusion_mode": "voice_dominant"
+                }
+            elif p_score >= f_score and p_score >= v_score and p_score > 0.5:
+                # If pose shows extreme stress/fidgeting, bias towards subtle_stress
+                final_result = {
+                    "emotion": "subtle_stress",
+                    "confidence": min(1.0, p_score + v_score),
+                    "fusion_mode": "kinetic_dominant"
                 }
             else:
                 final_result = {
-                    "emotion": v_emo,
-                    "confidence": v_score,
-                    "fusion_mode": "voice_dominant"
+                    "emotion": f_emo,
+                    "confidence": min(1.0, f_score + p_score),
+                    "fusion_mode": "face_dominant"
                 }
                 
         # Inject the trigger payload

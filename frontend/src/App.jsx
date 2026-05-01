@@ -47,6 +47,15 @@ export default function App() {
   const [fusionResult, setFusionResult] = useState(null);
   const [isFusionUploading, setIsFusionUploading] = useState(false);
   const [fusionError, setFusionError] = useState(null);
+  
+  // LIVE FUSION (Assistive Bridge)
+  const [isFusionLive, setIsFusionLive] = useState(false);
+  const fusionWebcamRef = useRef(null);
+  const fusionAudioContextRef = useRef(null);
+  const fusionProcessorRef = useRef(null);
+  const fusionPcmBuffersRef = useRef([]);
+  const fusionMediaStreamRef = useRef(null);
+  const fusionLoopRef = useRef(null);
 
   // ANALYTICS MODE
   const [sessionsList, setSessionsList] = useState([]);
@@ -241,6 +250,72 @@ export default function App() {
     } catch { setFusionError("Server detached."); } finally { setIsFusionUploading(false); }
   };
 
+  const startLiveFusion = async () => {
+    try {
+      setIsFusionLive(true); setFusionError(null);
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      fusionMediaStreamRef.current = stream;
+      fusionAudioContextRef.current = new (window.AudioContext || window.webkitAudioContext)();
+      
+      const source = fusionAudioContextRef.current.createMediaStreamSource(stream);
+      fusionProcessorRef.current = fusionAudioContextRef.current.createScriptProcessor(4096, 1, 1);
+      
+      fusionPcmBuffersRef.current = [];
+      fusionProcessorRef.current.onaudioprocess = (e) => {
+        const inputData = e.inputBuffer.getChannelData(0);
+        fusionPcmBuffersRef.current.push(new Float32Array(inputData));
+      };
+      
+      source.connect(fusionProcessorRef.current);
+      fusionProcessorRef.current.connect(fusionAudioContextRef.current.destination);
+
+      fusionLoopRef.current = setInterval(async () => {
+        if (!fusionWebcamRef.current) return;
+        
+        // 1. Capture image
+        const imageSrc = fusionWebcamRef.current.getScreenshot({ width: 640, height: 480 });
+        let imageBlob = null;
+        if (imageSrc) {
+           const res = await fetch(imageSrc);
+           imageBlob = await res.blob();
+        }
+
+        // 2. Capture audio chunk and flush buffers
+        let wavBlob = null;
+        if (fusionPcmBuffersRef.current.length > 0) {
+           const flatBuffer = new Float32Array(fusionPcmBuffersRef.current.reduce((acc, b) => acc + b.length, 0));
+           let offset = 0;
+           for (let b of fusionPcmBuffersRef.current) { flatBuffer.set(b, offset); offset += b.length; }
+           fusionPcmBuffersRef.current = []; // flush
+           wavBlob = encodeWAV(flatBuffer, fusionAudioContextRef.current.sampleRate);
+        }
+        
+        // 3. Submit background HTTP POST for async fusion (<200ms latency)
+        if (imageBlob || wavBlob) {
+           const formData = new FormData();
+           if (imageBlob) formData.append('image', imageBlob, "frame.jpg");
+           if (wavBlob) formData.append('audio', wavBlob, "chunk.wav");
+           
+           fetch('http://127.0.0.1:8080/api/v1/detect/fusion', { method: 'POST', body: formData })
+             .then(res => res.json())
+             .then(data => { if (!data.error) setFusionResult(data); })
+             .catch(err => console.log("Live fusion tick error", err));
+        }
+      }, 1500); // 1.5s sliding window for ASDBank contextual analysis
+    } catch (err) {
+      setFusionError("Camera/Microphone access denied.");
+      setIsFusionLive(false);
+    }
+  };
+
+  const stopLiveFusion = () => {
+    setIsFusionLive(false);
+    if (fusionLoopRef.current) clearInterval(fusionLoopRef.current);
+    if (fusionProcessorRef.current) fusionProcessorRef.current.disconnect();
+    if (fusionAudioContextRef.current) fusionAudioContextRef.current.close();
+    if (fusionMediaStreamRef.current) fusionMediaStreamRef.current.getTracks().forEach(track => track.stop());
+  };
+
   const clearImage = () => { setSelectedImage(null); setImagePreview(null); setImageResult(null); setImageError(null); setIsFaceCameraActive(false); };
   const clearAudio = () => { setSelectedAudio(null); setAudioResult(null); setAudioError(null); };
 
@@ -252,7 +327,7 @@ export default function App() {
         <div className="w-20 h-20 rounded-full bg-[var(--bg-panel)] border border-[var(--border-color)] flex items-center justify-center text-4xl mb-4 shadow-inner mt-2">
           {EMOJI_MAP[result.emotion] || EMOJI_MAP.neutral}
         </div>
-        <h3 className="text-3xl font-black capitalize text-[var(--text-title)] mb-4">{result.emotion}</h3>
+        <h3 className="text-3xl font-black capitalize text-[var(--text-title)] mb-4">{result.emotion === "subtle_stress" ? "Subtle Stress" : result.emotion}</h3>
         <div className="w-full bg-[var(--bg-base)] rounded-lg p-3 border border-[var(--border-color)] flex justify-between items-center">
           <span className="text-[11px] text-slate-500 uppercase font-bold tracking-widest">Confidence</span>
           <span className="font-bold text-emerald-500">{(result.confidence * 100).toFixed(1)}%</span>
@@ -267,7 +342,7 @@ export default function App() {
   }
 
   // --- RENDER ---
-  const TITLES = { live: 'Live Intelligence', image: 'Static Face Analysis', voice: 'Acoustic Analytics', fusion: 'Multimodal Fusion Generator', analytics: 'Session Data Vault' };
+  const TITLES = { live: 'Live Intelligence', image: 'Static Face Analysis', voice: 'Acoustic Analytics', fusion: 'Neural-Bridge Fusion', analytics: 'Session Data Vault' };
 
   const circum = 2 * Math.PI * 60;
   const strokeDashoffset = circum - (confidence * circum);
@@ -293,7 +368,7 @@ export default function App() {
             { id: 'live', icon: <Camera size={18} />, label: 'Live Detect' },
             { id: 'image', icon: <ImageIcon size={18} />, label: 'Face Analyzer' },
             { id: 'voice', icon: <Mic size={18} />, label: 'Voice Analytics' },
-            { id: 'fusion', icon: <Layers size={18} />, label: 'Multimodal Fusion' },
+            { id: 'fusion', icon: <Layers size={18} />, label: 'Neural-Bridge Fusion' },
             { id: 'analytics', icon: <Database size={18} />, label: 'Historical Vault' }
           ].map(item => (
             <button key={item.id} onClick={() => setActiveMode(item.id)} className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl font-semibold transition-all text-sm ${activeMode === item.id ? 'bg-[var(--bg-active)] text-[var(--text-title)] shadow-sm' : 'text-[var(--text-body)] hover:bg-[var(--bg-hover)]'}`}>
@@ -480,27 +555,50 @@ export default function App() {
               {/* FUSION INTERFACE */}
               <div className="bg-[var(--bg-panel)] border border-[var(--border-color)] p-8 rounded-3xl shadow-xl flex flex-col min-h-[500px]">
                 <div className="flex flex-col h-full fade-in">
-                  <div className="mb-8 border-b border-[var(--border-color)] pb-4 text-center">
-                    <h3 className="text-xl font-black text-[var(--text-title)] flex items-center justify-center gap-2"><Columns className="text-emerald-500" /> Static Decoupled Payloads</h3>
-                    <p className="text-xs font-bold text-slate-500 tracking-widest mt-2 uppercase">Provide a separate pre-extracted image and audio file to run them through the Synergistic Matrix</p>
+                  <div className="mb-8 border-b border-[var(--border-color)] pb-4 flex justify-between items-center">
+                    <div>
+                      <h3 className="text-xl font-black text-[var(--text-title)] flex items-center gap-2"><Columns className="text-emerald-500" /> Multimodal Integration Hub</h3>
+                      <p className="text-xs font-bold text-slate-500 tracking-widest mt-2 uppercase">v3.0 Assistive Neural-Bridge Enabled</p>
+                    </div>
+                    {isFusionLive ? (
+                      <button onClick={stopLiveFusion} className="px-6 py-2 bg-rose-500 hover:bg-rose-600 text-white rounded-full font-bold shadow-lg uppercase text-xs tracking-widest animate-pulse flex items-center gap-2">
+                        <Square size={14} fill="currentColor" /> Stop Live Bridge
+                      </button>
+                    ) : (
+                      <button onClick={startLiveFusion} className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-bold shadow-lg uppercase text-xs tracking-widest flex items-center gap-2">
+                        <Play size={14} fill="currentColor" /> Activate Live Bridge
+                      </button>
+                    )}
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 flex-1 content-center">
-                    <label className="h-72 border-2 border-dashed border-[var(--border-color)] hover:border-emerald-500/50 bg-[var(--bg-base)] rounded-3xl cursor-pointer flex flex-col items-center justify-center relative overflow-hidden group">
-                      <input type="file" className="absolute inset-0 opacity-0 cursor-pointer z-20" accept="image/*" onChange={(e) => { setFusionImage(e.target.files[0]); setFusionImagePreview(URL.createObjectURL(e.target.files[0])); }} />
-                      {fusionImagePreview ? <img src={fusionImagePreview} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" /> : <ImageIcon size={48} className="text-emerald-500 mb-4" />}
-                      <h4 className="text-xl font-bold text-[var(--text-title)] relative z-10">{fusionImage ? 'Image Secured' : 'Select Face Image'}</h4>
-                    </label>
-                    <label className="h-72 border-2 border-dashed border-[var(--border-color)] hover:border-emerald-500/50 bg-[var(--bg-base)] rounded-3xl cursor-pointer flex flex-col items-center justify-center relative group">
-                      <input type="file" className="absolute inset-0 opacity-0 cursor-pointer z-20" accept="audio/*" onChange={(e) => setFusionAudio(e.target.files[0])} />
-                      <Music size={48} className={fusionAudio ? "text-emerald-500 mb-4" : "text-[var(--border-color)] mb-4"} />
-                      <h4 className="text-xl font-bold text-[var(--text-title)] relative z-10">{fusionAudio ? 'Audio Secured' : 'Select Dialogue Audio'}</h4>
-                      {fusionAudio && <p className="text-xs bg-[var(--bg-panel)] px-3 py-1 font-bold rounded mt-2 z-10 text-[var(--text-body)] border border-[var(--border-color)] truncate max-w-[80%]">{fusionAudio.name}</p>}
-                    </label>
-                  </div>
-                  <button onClick={handleFusionSubmit} disabled={isFusionUploading || (!fusionImage && !fusionAudio)} className="w-full py-6 rounded-2xl bg-[var(--bg-active)] hover:bg-[var(--text-title)] hover:text-[var(--bg-base)] text-[var(--text-title)] font-black tracking-widest uppercase transition-colors disabled:opacity-50 border border-[var(--border-color)]">
-                    {isFusionUploading ? 'Processing Synergy...' : 'Execute Static Matrix Fusion'}
-                  </button>
+                  {!isFusionLive ? (
+                    <>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 flex-1 content-center">
+                        <label className="h-72 border-2 border-dashed border-[var(--border-color)] hover:border-emerald-500/50 bg-[var(--bg-base)] rounded-3xl cursor-pointer flex flex-col items-center justify-center relative overflow-hidden group">
+                          <input type="file" className="absolute inset-0 opacity-0 cursor-pointer z-20" accept="image/*" onChange={(e) => { setFusionImage(e.target.files[0]); setFusionImagePreview(URL.createObjectURL(e.target.files[0])); }} />
+                          {fusionImagePreview ? <img src={fusionImagePreview} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity" /> : <ImageIcon size={48} className="text-emerald-500 mb-4" />}
+                          <h4 className="text-xl font-bold text-[var(--text-title)] relative z-10">{fusionImage ? 'Image Secured' : 'Select Face Image'}</h4>
+                        </label>
+                        <label className="h-72 border-2 border-dashed border-[var(--border-color)] hover:border-emerald-500/50 bg-[var(--bg-base)] rounded-3xl cursor-pointer flex flex-col items-center justify-center relative group">
+                          <input type="file" className="absolute inset-0 opacity-0 cursor-pointer z-20" accept="audio/*" onChange={(e) => setFusionAudio(e.target.files[0])} />
+                          <Music size={48} className={fusionAudio ? "text-emerald-500 mb-4" : "text-[var(--border-color)] mb-4"} />
+                          <h4 className="text-xl font-bold text-[var(--text-title)] relative z-10">{fusionAudio ? 'Audio Secured' : 'Select Dialogue Audio'}</h4>
+                          {fusionAudio && <p className="text-xs bg-[var(--bg-panel)] px-3 py-1 font-bold rounded mt-2 z-10 text-[var(--text-body)] border border-[var(--border-color)] truncate max-w-[80%]">{fusionAudio.name}</p>}
+                        </label>
+                      </div>
+                      <button onClick={handleFusionSubmit} disabled={isFusionUploading || (!fusionImage && !fusionAudio)} className="w-full py-6 rounded-2xl bg-[var(--bg-active)] hover:bg-[var(--text-title)] hover:text-[var(--bg-base)] text-[var(--text-title)] font-black tracking-widest uppercase transition-colors disabled:opacity-50 border border-[var(--border-color)]">
+                        {isFusionUploading ? 'Processing Synergy...' : 'Execute Static Matrix Fusion'}
+                      </button>
+                    </>
+                  ) : (
+                    <div className="flex-1 w-full relative bg-[var(--bg-frame)] rounded-2xl overflow-hidden border border-[var(--border-color)] flex items-center justify-center mb-8">
+                       <Webcam audio={false} ref={fusionWebcamRef} screenshotFormat="image/jpeg" className="w-full h-full object-cover opacity-50 mix-blend-luminosity" />
+                       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                          <Activity className="text-emerald-500 animate-spin opacity-50 mb-4" size={64} />
+                          <h2 className="text-xl font-black text-white tracking-widest uppercase bg-black/50 px-4 py-2 rounded-lg">LIVE CONTINUOUS SYNERGY ACTIVE</h2>
+                       </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -512,12 +610,63 @@ export default function App() {
               )}
 
               {fusionResult && (
-                <div className="flex flex-wrap lg:flex-nowrap gap-6 justify-center animate-in slide-in-from-bottom-8">
-                  <div className="opacity-70 scale-95 w-full"><ResultCard result={fusionResult.raw_face_average || fusionResult.raw_face} title="Visual Array (Temporal Avg)" /></div>
-                  <div className="shadow-2xl z-10 bg-[var(--bg-base)] rounded-3xl rounded-t-lg p-1 w-full max-w-lg scale-105 border-2 border-indigo-500">
-                    <ResultCard result={fusionResult.fused_result} title="Absolute Fusion State" />
+                <div className="flex flex-col gap-8 animate-in slide-in-from-bottom-8">
+                  {/* WORD PREDICTION ENGINE */}
+                  {fusionResult.fused_result?.trigger_word_prediction && fusionResult.word_predictions?.length > 0 && (
+                    <div className="bg-amber-500/10 border-2 border-amber-500/50 rounded-3xl p-6 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+                      <div className="flex items-center gap-3 mb-6">
+                        <Zap className="text-amber-500" size={24} />
+                        <div>
+                           <h3 className="text-xl font-black text-amber-500 uppercase tracking-widest">Speech Friction Event Detected</h3>
+                           <p className="text-sm font-bold text-[var(--text-body)]">Contextual Predictive Layer Triggered</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        {fusionResult.word_predictions.map((word, idx) => (
+                          <div key={idx} className="flex-1 bg-[var(--bg-panel)] border border-[var(--border-color)] p-4 rounded-xl text-center shadow-sm">
+                             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Option {idx + 1}</p>
+                             <p className="text-2xl font-black text-[var(--text-title)] capitalize">{word}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex flex-wrap lg:flex-nowrap gap-6 justify-center">
+                    <div className="opacity-80 scale-95 w-full flex flex-col gap-4">
+                      <ResultCard result={fusionResult.raw_face_average || fusionResult.raw_face} title="Visual Array (Temporal Avg)" />
+                      {fusionResult.raw_pose && (
+                        <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 shadow-sm">
+                           <p className="text-[10px] uppercase font-black text-slate-500 tracking-widest mb-3">Holistic Pose Tracking</p>
+                           <div className="space-y-2">
+                             <div className="flex justify-between text-xs font-bold text-[var(--text-body)]"><span>Shoulder Tension</span><span className="text-emerald-500">{(fusionResult.raw_pose.shoulder_elevation * 100).toFixed(0)}%</span></div>
+                             <div className="flex justify-between text-xs font-bold text-[var(--text-body)]"><span>Fidgeting/Stimming</span><span className="text-emerald-500">{(fusionResult.raw_pose.hand_fidgeting * 100).toFixed(0)}%</span></div>
+                           </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="shadow-2xl z-10 bg-[var(--bg-base)] rounded-3xl rounded-t-lg p-1 w-full max-w-lg scale-105 border-2 border-indigo-500 flex flex-col">
+                      <ResultCard result={fusionResult.fused_result} title="Absolute Fusion State" />
+                      {fusionResult.stt && fusionResult.stt.text && (
+                         <div className="mt-4 px-6 pb-6 text-center">
+                           <p className="text-[10px] uppercase font-black text-slate-500 tracking-widest mb-2">Live Transcript</p>
+                           <p className="text-sm italic font-medium text-[var(--text-title)] bg-[var(--bg-panel)] p-3 rounded-xl border border-[var(--border-color)]">"{fusionResult.stt.text}"</p>
+                         </div>
+                      )}
+                    </div>
+                    <div className="opacity-80 scale-95 w-full flex flex-col gap-4">
+                      <ResultCard result={fusionResult.raw_voice} title="Acoustic Vector" />
+                      {fusionResult.raw_voice?.metrics && (
+                        <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-4 shadow-sm">
+                           <p className="text-[10px] uppercase font-black text-slate-500 tracking-widest mb-3">Acoustic Biomarkers</p>
+                           <div className="space-y-2">
+                             <div className="flex justify-between text-xs font-bold text-[var(--text-body)]"><span>Vocal Jitter</span><span className="text-emerald-500">{fusionResult.raw_voice.metrics.jitter.toFixed(3)}</span></div>
+                             <div className="flex justify-between text-xs font-bold text-[var(--text-body)]"><span>Silence Gap</span><span className="text-emerald-500">{(fusionResult.raw_voice.metrics.silence_ratio * 100).toFixed(0)}%</span></div>
+                           </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div className="opacity-70 scale-95 w-full"><ResultCard result={fusionResult.raw_voice} title="Acoustic Vector" /></div>
                 </div>
               )}
             </div>
